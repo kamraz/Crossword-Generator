@@ -247,6 +247,7 @@ class Crossword_Solver:
     "Class for solving a crossword puzzle"
     # TODO: Set hyperparameters for wordlist heuritic candidate genration
     # TODO: Add verbosity param
+    # TODO: Add a stop condition for a certain # of valid solitions
     def __init__(self, word_list: list[list[str, int]], custom_words: list[str]):
         self.custom_words = custom_words
         for word in self.custom_words:
