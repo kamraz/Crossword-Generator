@@ -1,2 +1,2 @@
 # Crossword-Generator
-A CLI for generating crossword puzzles with custom words
+A program for generating crossword puzzles with custom words using a heuristic bfs
