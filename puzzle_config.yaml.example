@@ -1,0 +1,37 @@
+# Simple 5x5 Crossword Configuration
+# A basic configuration for a small crossword puzzle
+
+# Word list file to use for generating the crossword
+word_list_file: "peter-broda-wordlist__scored.txt"
+
+# Custom words to add to the word list (with high priority)
+custom_words:
+  - "hello"
+  - "world"
+  - "code"
+  - "data"
+  - "test"
+  - "file"
+  - "line"
+
+# Board dimensions (height, width)
+board_shape: [5, 5]
+
+# Pre-placed words in the format: [word, row, col, direction]
+# Direction can be "across" or "down"
+words:
+  - ["hello", 0, 0, "across"]
+  - ["code", 3, 0, "across"]
+
+# Required block positions (black squares)
+# Format: [row, col]
+necessary_blockers:
+  - [1, 0]
+  - [2, 0]
+  - [3, 4]
+  - [4, 0]
+
+# # Optional block positions (black squares)
+# # These can be removed if needed for puzzle generation
+# optional_blockers:
+#   - [4, 4]
