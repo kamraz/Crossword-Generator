@@ -30,8 +30,3 @@ necessary_blockers:
   - [2, 0]
   - [3, 4]
   - [4, 0]
-
-# # Optional block positions (black squares)
-# # These can be removed if needed for puzzle generation
-# optional_blockers:
-#   - [4, 4]

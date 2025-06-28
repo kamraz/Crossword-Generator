@@ -51,27 +51,28 @@ word_list_file: "peter-broda-wordlist__scored.txt"
 
 # Custom words to add (with high priority)
 custom_words:
-  - "python"
-  - "programming"
-  - "algorithm"
+  - "hello"
+  - "world"
+  - "code"
+  - "data"
+  - "test"
+  - "file"
+  - "line"
 
 # Board dimensions [height, width]
-board_shape: [10, 10]
+board_shape: [5, 5]
 
 # Pre-placed words [word, row, col, direction]
 words:
-  - ["python", 0, 0, "across"]
-  - ["programming", 2, 0, "down"]
+  - ["hello", 0, 0, "across"]
+  - ["code", 3, 0, "across"]
 
 # Required block positions [row, col]
 necessary_blockers:
-  - [0, 6]
-  - [1, 5]
-
-# Optional block positions [row, col]
-optional_blockers:
-  - [0, 8]
-  - [1, 8]
+  - [1, 0]
+  - [2, 0]
+  - [3, 4]
+  - [4, 0]
 ```
 
 ### Configuration Options
@@ -87,7 +88,7 @@ optional_blockers:
 
 1. Copy the example configuration:
    ```bash
-   cp puzzle_config.example.yaml puzzle_config.yaml
+   cp puzzle_config.yaml.example puzzle_config.yaml
    ```
 
 2. Edit `puzzle_config.yaml` with your desired words and layout
@@ -103,7 +104,7 @@ optional_blockers:
 
 - `crossword.py` - Main crossword generator script
 - `puzzle_config.yaml` - Configuration file (create this from example)
-- `puzzle_config.example.yaml` - Example configuration file
+- `puzzle_config.yaml.example` - Example configuration file
 - `peter-broda-wordlist__scored.txt` - Word list file
 - `solutions.txt` - Generated solutions (created after running)
 
@@ -113,6 +114,7 @@ The word list file should contain words in the format:
 ```
 word;score
 ```
+Where score is a huristic used to pick candidate words
 
 For example:
 ```
@@ -127,10 +129,3 @@ The generator creates a `solutions.txt` file containing all valid crossword solu
 - The crossword grid (with letters and # for blocks)
 - The list of words used
 - A separator line between solutions
-
-## Troubleshooting
-
-- **Configuration file not found**: Ensure `puzzle_config.yaml` exists or specify the correct path
-- **YAML parsing error**: Check the syntax of your configuration file
-- **No solutions found**: Try adjusting the word list, custom words, or block positions
-- **Missing word list**: Ensure the word list file exists and is in the correct format
